@@ -17,13 +17,14 @@ import com.example.studentmanagementsystem.repository.UserRepository;
 public class UserController {
 	@Autowired
 	UserRepository userRepo;
+	
 	@GetMapping("/getuser/{email}")
 	public User getUser(@PathVariable String email) {
 		User user = userRepo.findByEmail(email);
 		return user;
 	}
 	@GetMapping("/getuserId/{id}")
-	public Optional<User> getUser(@PathVariable Integer id) {
+	public Optional<User> getUser(@PathVariable Long id) {
 		Optional<User> user = userRepo.findById(id);
 		return user;
 	}

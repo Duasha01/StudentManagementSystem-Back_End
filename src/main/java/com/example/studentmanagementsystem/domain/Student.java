@@ -9,13 +9,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "Student_details")
+@Entity(name="students")
+@Table(name = "students")
 public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     @Column(name = "name")
     private String name;
     @Column(name = "age")
@@ -23,18 +23,12 @@ public class Student {
     
     @Column(name="gender")
     private String gender;
-    
-
-    public String getGender() {
-		return gender;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
 
 	@Column(name = "email")
     private String email;
+	
+	@Column(name = "contactNum")
+    private String contactNum;
 
     @Column(name = "address")
     private String address;
@@ -44,7 +38,7 @@ public class Student {
     
     public Student() {}
 
-    public Student(int id, String name, Integer age, String email, String address,String degree) {
+    public Student(Long id, String name, Integer age, String email, String address,String degree) {
         super();
         this.id = id;
         this.name = name;
@@ -54,11 +48,11 @@ public class Student {
         this.degree = degree;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -100,6 +94,21 @@ public class Student {
 
 	public void setDegree(String degree) {
 		this.degree = degree;
+	}
+    public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getContactNum() {
+		return contactNum;
+	}
+
+	public void setContactNum(String contactNum) {
+		this.contactNum = contactNum;
 	}
 	
 	

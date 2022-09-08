@@ -1,6 +1,6 @@
-DROP TABLE if exists student_details;
+DROP TABLE if exists students;
 
-CREATE TABLE student_details (
+CREATE TABLE students(
                               id bigint(20) NOT NULL AUTO_INCREMENT,
                               name varchar(100) DEFAULT NULL,
                               age integer DEFAULT NULL,
@@ -11,12 +11,12 @@ CREATE TABLE student_details (
                               PRIMARY KEY (id)
 );
 
--- Insert dummy data into the student_details table
-INSERT INTO student_details (id, name,gender, age, email, address,degree) VALUES ('1', 'Duasha','F', 22, 'duashaindeewarie@gmail.com','Weligama','Bsc in Computer Science');
-INSERT INTO student_details (name,gender, age, email, address,degree) VALUES ('Dilakshan','M', 22,'dilakshanchandrasena@gmail.com' , 'Colombo','Bsc in Computer Science');
-INSERT INTO student_details (name,gender, age, email, address,degree) VALUES ('Aneeq','F', 18,'aneeq123@gmail.com' , 'Negombo','Bsc in Aritificial Intelligence');
-INSERT INTO student_details (name,gender, age, email, address,degree) VALUES ('Alia','F', 20,'alia4@gmail.com' , 'Kandy','Bsc in Software Engineering');
-INSERT INTO student_details (name,gender, age, email, address,degree) VALUES ('Muzni','M', 22,'muznim2@gmail.com' , 'Matara','Bsc in Computer Science');
+-- Insert dummy data into the students table
+INSERT INTO students (id, name,gender, age, email, contact_num,address,degree) VALUES ('1', 'Duasha','F', 22, 'duashaindeewarie@gmail.com','0774176502','Weligama','Bsc in Computer Science');
+INSERT INTO students (name,gender, age, email, contact_num,address,degree) VALUES ('Dilakshan','M', 22,'dilakshanchandrasena@gmail.com' ,'0774176432', 'Colombo','Bsc in Computer Science');
+INSERT INTO students (name,gender, age, email, contact_num, address,degree) VALUES ('Aneeq','F', 18,'aneeq123@gmail.com' , '0725667502','Negombo','Bsc in Aritificial Intelligence');
+INSERT INTO students (name,gender, age, email, contact_num, address,degree) VALUES ('Alia','F', 20,'alia4@gmail.com' ,'0774146802', 'Kandy','Bsc in Software Engineering');
+INSERT INTO students (name,gender, age, email, contact_num, address,degree) VALUES ('Muzni','M', 22,'muznim2@gmail.com' ,'0713678965', 'Matara','Bsc in Computer Science');
 
 /*insert following record into the users table to get logging credentials
     Email: admin@ac.uk

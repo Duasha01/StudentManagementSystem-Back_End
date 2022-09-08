@@ -26,7 +26,7 @@ import java.util.Optional;
 
         //Display details of a student using name
         @GetMapping("/findstudent/{id}")
-        public Optional<Student> displayStudentDetails(@PathVariable int id){
+        public Optional<Student> displayStudentDetails(@PathVariable Long id){
             Optional<Student> student = studentRepo.findById(id);
             return student;
         }
@@ -47,10 +47,25 @@ import java.util.Optional;
 
         //Delete a student from the database
         @DeleteMapping("/delete/{id}")
-        public List<Student> deleteStudent(@PathVariable int id){
+        public List<Student> deleteStudent(@PathVariable Long id){
             studentRepo.deleteById(id);
             List<Student> studentList = (List<Student>) studentRepo.findAll();
             return studentList;
         }
-
+        
+        @GetMapping("/studentCount")
+        public Long getStudentCount() {
+        	return studentRepo.getStudentCount();
+        }
+        
+        @GetMapping("/studentCountDegree/{degree}")
+        public Long getStudentCountByDegree(@PathVariable String degree) {
+        	return studentRepo.getStudentCountByDegree(degree);
+        }
+        
+        @GetMapping("/studentCountGender/{gender}")
+        public Long getStudentCountByGender(@PathVariable String gender) {
+        	return studentRepo.getStudentCountByGender(gender);
+        }
+ 
 }
