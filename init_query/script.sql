@@ -12,13 +12,13 @@ CREATE TABLE students(
 );
 
 -- Insert dummy data into the students table
-INSERT INTO students (id, name,gender, age, email, contact_num,address,degree) VALUES ('1', 'Duasha','F', 22, 'duashaindeewarie@gmail.com','0774176502','Weligama','Bsc in Computer Science');
-INSERT INTO students (name,gender, age, email, contact_num,address,degree) VALUES ('Dilakshan','M', 22,'dilakshanchandrasena@gmail.com' ,'0774176432', 'Colombo','Bsc in Computer Science');
-INSERT INTO students (name,gender, age, email, contact_num, address,degree) VALUES ('Aneeq','F', 18,'aneeq123@gmail.com' , '0725667502','Negombo','Bsc in Aritificial Intelligence');
-INSERT INTO students (name,gender, age, email, contact_num, address,degree) VALUES ('Alia','F', 20,'alia4@gmail.com' ,'0774146802', 'Kandy','Bsc in Software Engineering');
-INSERT INTO students (name,gender, age, email, contact_num, address,degree) VALUES ('Muzni','M', 22,'muznim2@gmail.com' ,'0713678965', 'Matara','Bsc in Computer Science');
+INSERT INTO students (name,gender, age, email, contact_num,address,degree) VALUES ('Duasha Indeewarie','F', 22, 'duashaindeewarie@gmail.com','0774176502','Weligama','Bsc in Computer Science');
+INSERT INTO students (name,gender, age, email, contact_num,address,degree) VALUES ('Dilakshan Chandrasena','M', 22,'dilakshanchandrasena@gmail.com' ,'0774176432', 'Colombo','Bsc in Computer Science');
+INSERT INTO students (name,gender, age, email, contact_num, address,degree) VALUES ('Aneeq Ahammed','F', 18,'aneeq123@gmail.com' , '0725667502','Negombo','Bsc in Aritificial Intelligence');
+INSERT INTO students (name,gender, age, email, contact_num, address,degree) VALUES ('Alia SIngh','F', 20,'alia4@gmail.com' ,'0774146802', 'Kandy','Bsc in Software Engineering');
+INSERT INTO students (name,gender, age, email, contact_num, address,degree) VALUES ('Muzni Maznavi','M', 22,'muznim2@gmail.com' ,'0713678965', 'Matara','Bsc in Computer Science');
 
-/*insert following record into the users table to get logging credentials
+/*insert the following record into the users table to get logging credentials
     Email: admin@ac.uk
     Password: admin@123
 
